@@ -12,3 +12,11 @@
 No arquivo package.json, colocar um novo script:
     "dev": "nodemon index"
 
+## Banco de dados
+Na pasta ./src/database, criar o arquivo "db.js".
+
+## Instalar o mongoose (Biblioteca para conexão com o mongodb):
+    npm i mongoose
+
+
+
