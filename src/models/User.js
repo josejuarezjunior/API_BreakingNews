@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 // Definindo um novo Schema
 const UserSchema = new mongoose.Schema({
@@ -32,4 +32,4 @@ const UserSchema = new mongoose.Schema({
 // Atribuindo a uma variavel uma model com o Schema criado anteriormente
 const User = mongoose.model('User', UserSchema);
 
-module.exports = User;
+export default User;
