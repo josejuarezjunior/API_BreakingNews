@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import bcrypt from 'bcrypt';
 
 // Definindo um novo Schema
 const UserSchema = new mongoose.Schema({
@@ -18,6 +19,7 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+    select: false,
   },
   avatar: {
     type: String,
@@ -27,6 +29,12 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+});
+
+// Antes de salvar, executa uma função... Aqui não pode ser arrow function. É uma particularidade do 'pre'.
+UserSchema.pre('save', async function (next) {
+  this.password = await bcrypt.hash(this.password, 10);
+  next();
 });
 
 // Atribuindo a uma variavel uma model com o Schema criado anteriormente

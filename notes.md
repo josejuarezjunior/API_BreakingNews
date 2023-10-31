@@ -19,4 +19,5 @@ Na pasta ./src/database, criar o arquivo "db.js".
     npm i mongoose
 
 
-
+## Instalar o bcryptjs, para criptografia de senha:
+    npm i bcrypt
