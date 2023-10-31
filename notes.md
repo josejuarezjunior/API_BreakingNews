@@ -19,5 +19,12 @@ Na pasta ./src/database, criar o arquivo "db.js".
     npm i mongoose
 
 
-## Instalar o bcryptjs, para criptografia de senha:
+## Instalar a biblioteca bcryptjs, para criptografia de senha:
     npm i bcrypt
+
+## Instalar a biblioteca dotenv, para usar variáveis de ambiente
+    npm i dotenv
+
+Depois disso é necessário importar o dotenv no arquivo index.js, e executar o método config:
+    import dotenv from 'dotenv';
+    dotenv.config();
