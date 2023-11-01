@@ -28,3 +28,7 @@ Na pasta ./src/database, criar o arquivo "db.js".
 Depois disso é necessário importar o dotenv no arquivo index.js, e executar o método config:
     import dotenv from 'dotenv';
     dotenv.config();
+
+## Instalar a biblioteca jsonwebtoken (JWT), para criar uma chave web token, de maneira a guardar a sessão do usuário após o login
+
+    npm i jsonwebtoken
